@@ -1,6 +1,8 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 import Home from './views/Home.vue'
+// 查学校
+import School from './components/common/school/index.vue'
 
 Vue.use(Router)
 
@@ -12,6 +14,11 @@ export default new Router({
       path: '/',
       name: 'home',
       component: Home
+    },
+    {
+      path: '/School',
+      name: 'School',
+      component: School
     },
     {
       path: '/about',

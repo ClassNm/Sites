@@ -13,9 +13,9 @@
         margin: 30px auto;
     }
     img{
-        width: 200px;
+        width: 210px;
         height: 300px;
         display: inline-block;
-        margin-right: 20px;
+        margin: 0 20px;
     }
 </style>
