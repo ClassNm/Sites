@@ -2,8 +2,8 @@
     <div class="box">
         <div class="boxSone">
             <ul>
-                <li>查大学</li>
-                <li>查专业</li>
+                <li @click="SchoolName">查大学</li>
+                <li @click="Majar">查专业</li>
                 <li>高考直播间</li>
                 <li>国际游学</li>
                 <li>生涯规划师</li>
@@ -21,7 +21,14 @@
 </template>
 <script>
 export default {
-    
+    methods:{
+        SchoolName(){
+            this.$router.push('/School')
+        },
+        Majar(){
+            this.$router.push('/Specialty')
+        }
+    }
 }
 </script>
 <style scoped>
@@ -44,6 +51,10 @@ export default {
         line-height: 80px;
         color: #000;
         font-size: 15px;
+    }
+    li:hover{
+        color: orange;
+        cursor:pointer
     }
     .bot{
         display: inline-block;

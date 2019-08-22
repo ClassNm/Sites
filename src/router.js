@@ -3,6 +3,8 @@ import Router from 'vue-router'
 import Home from './views/Home.vue'
 // 查学校
 import School from './components/common/school/index.vue'
+// 查专业
+import Specialty from './components/common/specialty.vue/index.vue'
 
 Vue.use(Router)
 
@@ -19,6 +21,11 @@ export default new Router({
       path: '/School',
       name: 'School',
       component: School
+    },
+    {
+      path: '/Specialty',
+      name: 'Specialty',
+      component: Specialty
     },
     {
       path: '/about',

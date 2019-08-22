@@ -30,6 +30,7 @@
         border-top: 1px solid silver;
         display: block;
         line-height: 50px;
+        /* padding-left: 25%; */
     }
     .box{
         width: 200px;
