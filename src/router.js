@@ -5,6 +5,8 @@ import Home from './views/Home.vue'
 import School from './components/common/school/index.vue'
 // 查专业
 import Specialty from './components/common/specialty.vue/index.vue'
+// 与我相关
+import Correlation from './components/common/correlation/index.vue'
 
 Vue.use(Router)
 
@@ -26,6 +28,11 @@ export default new Router({
       path: '/Specialty',
       name: 'Specialty',
       component: Specialty
+    },
+    {
+      path: '/Correlation',
+      name: 'Correlation',
+      component: Correlation
     },
     {
       path: '/about',
