@@ -4,6 +4,9 @@
         <HeaderBot></HeaderBot>
         <Top></Top>
         <TopHeader></TopHeader>
+        <Center></Center>
+        <Fouter></Fouter>
+        <BackTop></BackTop>
     </div>
 </template>
 
@@ -12,13 +15,17 @@ import Header from '../homePage/Header'
 import HeaderBot from '../homePage/HeaderBot'
 import Top from './Top'
 import TopHeader from'./TopHeader'
+import Center from './Center'
+import Fouter from '../homePage/Fouter'
 
 export default {
     components:{
         Header,
         HeaderBot,
         Top,
-        TopHeader
+        TopHeader,
+        Center,
+        Fouter
     }
 }
 </script>

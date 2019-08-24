@@ -4,7 +4,7 @@
         <div class="tit">
             首页
         </div>
-        <div class="tit">
+        <div class="tit" @click="about">
             关于我们
         </div>
         <input class="Inp" type="text" placeholder="搜索你感兴趣的课程" autocomplete="off" aria-label="搜索框">
@@ -17,7 +17,11 @@
 
 <script>
 export default {
-    
+    methods:{
+        about(){
+            this.$router.push('/Correlation')
+        }
+    }
 }
 </script>
 
@@ -26,7 +30,6 @@ export default {
         width: 1000px;
         margin: 0 auto;
         height: 100px;
-        /* background: #ff6c00 */
     }
     .tit{
         width:15%;
@@ -35,15 +38,13 @@ export default {
         font-size: 20px;
         display: inline-block;
         color: #000;
-        /* overflow: hidden; */
         text-align: center;
+         cursor:pointer
     }
     img{
         width: 15%;
         height: 80px;
-        /* display: inline-block; */
         float: left;
-        /* line-height: 100px; */
     }
     .Inp{
         width: 40%;
