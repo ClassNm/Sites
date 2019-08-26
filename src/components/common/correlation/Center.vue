@@ -1,12 +1,12 @@
 <template>
     <div class="box">
         <div class="header">
-            <div style="text-align: center;font-size: 40px;line-height: 40px;color: #fff;padding-top: 50px;padding-bottom: 80px;">
+            <div :class="headerHea" style="text-align: center;font-size: 40px;line-height: 40px;color: #fff;padding-top: 50px;padding-bottom: 80px;">
                 <span style="margin-right: 12px;font-weight: bolder;">学员</span>
                 评价
                 <div style="font-size: 12px;opacity: .5;letter-spacing: 5px;line-height: 12px;margin-top: 16px;">EVALUATE</div>
             </div>
-            <Carousel autoplay v-model="value2" loop :dots="none">
+            <Carousel :class="headerBot" autoplay v-model="value2" loop :dots="none">
                 <CarouselItem>
                     <img style="width:220px;height:400px;margin:0 15px;border-radius: 8px;" src="https://imgs.genshuixue.com/0cms/d/file/content/2019/03/5c8f35b041eb3.jpg" alt="">
                     <img style="width:220px;height:400px;margin:0 15px;border-radius: 8px;" src="https://imgs.genshuixue.com/0cms/d/file/content/2019/03/5c8f35b066a5a.jpg" alt="">
@@ -34,16 +34,17 @@
             </Carousel>
         </div>
         <div class="headertop">
-            <div style="text-align: center;font-size: 40px;color: #000;letter-spacing: 0;">
+            <div :class="headertopHead" style="text-align: center;font-size: 40px;color: #000;letter-spacing: 0;">
                 <span style="margin-right: 8px;font-weight: bolder;">关于</span>
                 我们
                 <div style="font-size: 12px;color: #9d9d9d;letter-spacing: 5px;margin-top: 12px;line-height: 12px;margin-bottom: 50px;">ABOUT</div>
             </div>
             <div style="text-align:left;">
-                <div style="width:500px;z-index: 5;display: inline-block;position: relative">
+                <div :class="headertopBot" style="width:500px;z-index: 5;display: inline-block;position: relative">
                     <img style="width:500px;" src="https://imgs.genshuixue.com/0cms/d/file/content/2019/03/5c8092c5bb53f.jpg" alt="">
                 </div>
                 <div 
+                :class="headertopRight"
                 style="width:500px;
                 background: #fff;
                 height: 440px;
@@ -63,6 +64,7 @@
                     <div style="margin-top: 16px;font-size: 14px;">秉承“在线学习更高效”的学习理念，坚持“好老师、好课程、好服务、高科技”的价值主张，全力打造“直播+辅导”双师模式，优选名师，打造上千门精品课程。优秀辅导老师全程服务，课堂互动多，课程有回放，提供的课程服务涵盖小学，初中，高中，大学，成人英语，思维训练，瑜伽，家庭教育，国学，从业考证等几十个品类。通过专职专业的教学辅导团队和强大的技术能力，致力于为学生和家长提供个性化、互动化、智能化的在线学习体验。</div>
                 </div>
                 <div 
+                :class="headertopRightTw"
                 style="
                 width: 800px;
                 height: 380px;
@@ -78,7 +80,7 @@
             </div>
         </div>
         <div class="top">
-            <div>
+            <div :class="topHead">
                 <div style="font-size: 40px;color: #000;line-height: 40px;">
                     <span style="margin-right: 8px;font-weight: bolder;">未来</span>
                     我们仍在努力
@@ -86,52 +88,52 @@
                 <div style="font-size: 12px;color: #9d9d9d;letter-spacing: 5px;margin-top: 16px;">FUTURE</div>
                 <div style="font-size: 14px;color: #5d5d5d;margin: 16px 0 60px 0;">人民日报、CCTV权威报道，荣获多项教育大奖</div>
             </div>
-            <div style="margin-bottom:30px;width:180px;margin-right:20px;height:200px;float: left;">
+            <div :class="topBott" style="margin-bottom:30px;width:180px;margin-right:20px;height:200px;float: left;">
                 <img style="width: 180px;height: 130px;" src="https://imgs.genshuixue.com/0cms/d/file/content/2019/03/5c910709f31e5.png" alt="">
                 <div style="font-size: 16px;color: #2d2d2d;font-weight: bolder;margin-top: 16px;">央视网</div>
                 <div style="margin-top: 4px;font-size: 14px;color: #5d5d5d;">“跟谁学”要做想学习的首选</div>
             </div>
-            <div style="margin-bottom:30px;width:180px;margin-right:20px;height:200px;float: left;">
+            <div :class="topBott"  style="margin-bottom:30px;width:180px;margin-right:20px;height:200px;float: left;">
                 <img style="width: 180px;height: 130px;" src="https://imgs.genshuixue.com/0cms/d/file/content/2019/03/5c91070a39b4d.png" alt="">
                 <div style="font-size: 16px;color: #2d2d2d;font-weight: bolder;margin-top: 16px;">科技日报</div>
                 <div style="margin-top: 4px;font-size: 14px;color: #5d5d5d;">陈向东做不一样的教育</div>
             </div>
-            <div style="margin-bottom:30px;width:180px;margin-right:20px;height:200px;float: left;">
+            <div :class="topBott"  style="margin-bottom:30px;width:180px;margin-right:20px;height:200px;float: left;">
                 <img style="width: 180px;height: 130px;" src="https://imgs.genshuixue.com/0cms/d/file/content/2019/03/5c91070a5f342.png" alt="">
                 <div style="font-size: 16px;color: #2d2d2d;font-weight: bolder;margin-top: 16px;">人民日报</div>
                 <div style="margin-top: 4px;font-size: 14px;color: #5d5d5d;">“跟谁学”带来教育新理念</div>
             </div>
-            <div style="margin-bottom:30px;width:180px;margin-right:20px;height:200px;float: left;">
+            <div :class="topBott"  style="margin-bottom:30px;width:180px;margin-right:20px;height:200px;float: left;">
                 <img style="width: 180px;height: 130px;" src="https://imgs.genshuixue.com/0cms/d/file/content/2019/03/5c91070a8b2a1.png" alt="">
                 <div style="font-size: 16px;color: #2d2d2d;font-weight: bolder;margin-top: 16px;">CCTV财经</div>
                 <div style="margin-top: 4px;font-size: 14px;color: #5d5d5d;">陈向东和他的跟谁学</div>
             </div>
-            <div style="margin-bottom:30px;width:180px;margin-right:20px;height:200px;float: left;">
+            <div :class="topBott"  style="margin-bottom:30px;width:180px;margin-right:20px;height:200px;float: left;">
                 <img style="width: 180px;height: 130px;" src="https://imgs.genshuixue.com/0cms/d/file/content/2019/04/5cb57220af118.png" alt="">
                 <div style="font-size: 16px;color: #2d2d2d;font-weight: bolder;margin-top: 16px;">央视《经济半小时》</div>
                 <div style="margin-top: 4px;font-size: 14px;color: #5d5d5d;">新创业演绎：像淘宝一样“淘”学</div>
             </div>
-            <div style="margin-bottom:30px;width:180px;margin-right:20px;height:200px;float: left;">
+            <div :class="topBott"  style="margin-bottom:30px;width:180px;margin-right:20px;height:200px;float: left;">
                 <img style="width: 180px;height: 130px;" src="https://imgs.genshuixue.com/0cms/d/file/content/2019/03/5c91070acdac3.png" alt="">
                 <div style="font-size: 16px;color: #2d2d2d;font-weight: bolder;margin-top: 16px;">新华网</div>
                 <div style="margin-top: 4px;font-size: 14px;color: #5d5d5d;">中国教育行业影响力APP</div>
             </div>
-            <div style="margin-bottom:30px;width:180px;margin-right:20px;height:200px;float: left;">
+            <div :class="topBott"  style="margin-bottom:30px;width:180px;margin-right:20px;height:200px;float: left;">
                 <img style="width: 180px;height: 130px;" src="https://imgs.genshuixue.com/0cms/d/file/content/2019/03/5c91070b09f3a.png" alt="">
                 <div style="font-size: 16px;color: #2d2d2d;font-weight: bolder;margin-top: 16px;">中国网</div>
                 <div style="margin-top: 4px;font-size: 14px;color: #5d5d5d;">人气教育APP</div>
             </div>
-            <div style="margin-bottom:30px;width:180px;margin-right:20px;height:200px;float: left;">
+            <div :class="topBott"  style="margin-bottom:30px;width:180px;margin-right:20px;height:200px;float: left;">
                 <img style="width: 180px;height: 130px;" src="https://imgs.genshuixue.com/0cms/d/file/content/2019/03/5c91070b3c4fb.png" alt="">
                 <div style="font-size: 16px;color: #2d2d2d;font-weight: bolder;margin-top: 16px;">央广网</div>
                 <div style="margin-top: 4px;font-size: 14px;color: #5d5d5d;">中国受欢迎教育APP品牌</div>
             </div>
-            <div style="margin-bottom:30px;width:180px;margin-right:20px;height:200px;float: left;">
+            <div :class="topBott"  style="margin-bottom:30px;width:180px;margin-right:20px;height:200px;float: left;">
                 <img style="width: 180px;height: 130px;" src="https://imgs.genshuixue.com/0cms/d/file/content/2019/03/5c91070b6f53e.png" alt="">
                 <div style="font-size: 16px;color: #2d2d2d;font-weight: bolder;margin-top: 16px;">中国网</div>
                 <div style="margin-top: 4px;font-size: 14px;color: #5d5d5d;">影响力在线教育品牌</div>
             </div>
-            <div style="margin-bottom:30px;width:180px;margin-right:20px;height:200px;float: left;">
+            <div :class="topBott"  style="margin-bottom:30px;width:180px;margin-right:20px;height:200px;float: left;">
                 <img style="width: 180px;height: 130px;" src="https://imgs.genshuixue.com/0cms/d/file/content/2019/03/5c91070ba3514.png" alt="">
                 <div style="font-size: 16px;color: #2d2d2d;font-weight: bolder;margin-top: 16px;">网易教育</div>
                 <div style="margin-top: 4px;font-size: 14px;color: #5d5d5d;">最受用户喜欢教育APP</div>
@@ -153,6 +155,7 @@
             bottom: 140px;
             position: relative;
             "
+            :class="fouterBox"
             >
                 <!-- <div style="border-left: 13px solid #fff;right: -13px;width: 0;height: 0;border-bottom: 13px solid transparent;position: relative;top: 33px;border-top: 13px solid transparent;"></div> -->
                 <div style="font-size: 12px;color: #cdcdcd;text-align:right;margin-right: 30px;">年度大事件</div>
@@ -162,7 +165,7 @@
                 <div style="margin-top: 16px;font-size: 14px;color: #2d2d2d;">- 展现创新力量 跟谁学获“年度在线教育平台”大奖</div>
                 <div style="color: #555;background-color: transparent;text-align:right;margin-top: 40px;margin-right: 30px;">MORE ></div>
             </div>
-            <div style="height:500px;width:100px;display: inline-block;">
+            <div :class="fouterCenter" style="height:500px;width:100px;display: inline-block;">
                 <div>
                     <div style="font-size: 24px;color: #ff6c00;text-align: center;">2017</div>
                     <div style="width: 2px;height: 124px;background:#ffbf7a;margin:8px auto;"></div>
@@ -189,6 +192,7 @@
             text-align: left;
             display: inline-block;
             "
+            :class="fouterBox"
             >
                 <div style="font-size: 12px;color: #cdcdcd;text-align:right;margin-right: 30px;">年度大事件</div>
                 <div style="font-size: 32px;color: #2d2d2d;line-height: 32px;margin-bottom: 16px;font-weight: bolder;">2016</div>
@@ -211,6 +215,7 @@
             position: relative;
             bottom: 155px;
             "
+            :class="fouterBox"
             >
                 <div style="font-size: 12px;color: #cdcdcd;text-align:right;margin-right: 30px;">年度大事件</div>
                 <div style="font-size: 32px;color: #2d2d2d;line-height: 32px;margin-bottom: 16px;font-weight: bolder;">2015</div>
@@ -228,8 +233,46 @@
         data () {
             return {
                 value2: 0,
-                none:"none"
+                none:"none",
+                headerHea:"",
+                headerBot:"",
+                headertopHead:"",
+                headertopBot:"",
+                headertopRight:"",
+                headertopRightTw:"",
+                topHead:"",
+                topBott:"",
+                fouterCenter:"",
+                fouterBox:""
+
             }
+        },
+         mounted(){
+            window.addEventListener('scroll', this.handleScroll)
+        },
+        methods:{
+            handleScroll(){
+                var scrollTop = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop
+                if(scrollTop>4700&&scrollTop<5000){
+                    this.headerHea = "headerHea"
+                    this.headerBot = "headerBot"
+                
+                }else if(scrollTop>5500&scrollTop<5900){
+
+                    this.headertopHead = "headertopHead"
+                    this.headertopBot = "headertopBot"
+                    this.headertopRight = "headertopRight"
+                    this.headertopRightTw = "headertopRightTw"
+                }else if(scrollTop>6500&scrollTop<6800){
+                    this.topHead = "topHead"
+                    this.topBott = "topBott"
+                }else if(scrollTop>7500&scrollTop<7700){
+                    this.fouterCenter = "fouterCenter"
+                    this.fouterBox = "fouterBox"
+                }
+                // console.log(scrollTop)
+            }
+
         }
     }
 </script>
@@ -247,12 +290,117 @@
         background-size: cover;
         -webkit-background-size: cover;
     }
+    .headerHea{
+        animation:headerHea 1s infinite;
+        -webkit-animation:headerHea 1s infinite;
+        animation-iteration-count:1;
+    }
+    .headertopHead{
+        animation:headerHea 1s infinite;
+        -webkit-animation:headerHea 1s infinite;
+        animation-iteration-count:1;
+    }
+    .topHead{
+        animation:headerHea 1s infinite;
+        -webkit-animation:headerHea 1s infinite;
+        animation-iteration-count:1;
+    }
+     @keyframes headerHea
+    {
+        from {display: none !important;position: relative;top: -100px;opacity: -0.6;}
+        to {display: block !important;position: relative;top: 0;opacity: 0.4;}
+    }
+
+    @-webkit-keyframes headerHea
+    {
+        from {display: none !important;position: relative;top: -100px;opacity: -0.6;}
+        to {display: block !important;position: relative;top: 0;opacity: 0.4;}
+    }
+    .headertopBot{
+        animation:headertopBot 1s infinite;
+        -webkit-animation:headertopBot 1s infinite;
+        animation-iteration-count:1;
+    }
+     @keyframes headertopBot
+    {
+        from {display: none !important;position: relative;right: 200px;opacity: -0.6;}
+        to {display: block !important;position: relative;right: 0;opacity: 0.4;}
+    }
+
+    @-webkit-keyframes headertopBot
+    {
+        from {display: none !important;position: relative;right: 200px;opacity: -0.6;}
+        to {display: block !important;position: relative;right: 0;opacity: 0.4;}
+    }
+    .headertopRight{
+        animation:headertopRight 1s infinite;
+        -webkit-animation:headertopRight 1s infinite;
+        animation-iteration-count:1;
+    }
+    .headertopRightTw{
+         animation:headertopRight 1s infinite;
+        -webkit-animation:headertopRight 1s infinite;
+        animation-iteration-count:1;
+    }
+     @keyframes headertopRight
+    {
+        from {display: none !important;position: relative;left: 200px;opacity: -0.6;}
+        to {display: block !important;position: relative;left: 0;opacity: 0.4;}
+    }
+
+    @-webkit-keyframes headertopRight
+    {
+        from {display: none !important;position: relative;left: 200px;opacity: -0.6;}
+        to {display: block !important;position: relative;left: 0;opacity: 0.4;}
+    }
     .headertop{
         margin-top: 80px;
     }
     .top{
         height: 700px;
         width: 1000px;
+    }
+    .topBott{
+        animation:topBott 1s infinite;
+        -webkit-animation:topBott 1s infinite;
+        animation-iteration-count:1;
+    }
+    .fouterCenter{
+        animation:topBott 1s infinite;
+        -webkit-animation:topBott 1s infinite;
+        animation-iteration-count:1;
+    }
+    .headerBot{
+        animation:topBott 1s infinite;
+        -webkit-animation:topBott 1s infinite;
+        animation-iteration-count:1;
+    }
+    @keyframes topBott
+    {
+        from {display: none !important;position: relative;top: 200px;opacity: -0.6;}
+        to {display: block !important;position: relative;top: 0;opacity: 0.4;}
+    }
+
+    @-webkit-keyframes topBott
+    {
+        from {display: none !important;position: relative;top: 200px;opacity: -0.6;}
+        to {display: block !important;position: relative;top: 0;opacity: 0.4;}
+    }
+    .fouterBox{
+        animation:fouterBox 1s infinite;
+        -webkit-animation:fouterBox 1s infinite;
+        animation-iteration-count:1;
+    }
+    @keyframes fouterBox
+    {
+        from {display: none !important;opacity: -0.6;}
+        to {display: block !important;opacity: 0.4;}
+    }
+
+    @-webkit-keyframes fouterBox
+    {
+        from {display: none !important;opacity: -0.6;}
+        to {display: block !important;opacity: 0.4;}
     }
     .fouter{
         width: 1000px;

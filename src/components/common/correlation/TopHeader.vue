@@ -1,6 +1,6 @@
 <template>
     <div class="box">
-        <div class="header">
+        <div :class="header">
             <div style="font-size: 40px;line-height: 40px;color: #2d2d2d;text-align: center;">
                 <span style="margin-right: 12px;font-weight: bolder;">好课程</span>
                 匠心打造品质好课
@@ -9,7 +9,7 @@
             <p style="margin-top: 16px;font-size: 14px;color: #5d5d5d;text-align: center;">全品类在线教育课程，涵盖小学、初中、高中、大学、语言培训、思维训练、从业考证、运动健康、家庭教育等类别。</p>
             <p style="font-size: 14px;color: #5d5d5d;text-align: center;margin-bottom: 50px;">专业的教研团队，与名师一起精心打磨每一门课程，确保课程质量上乘，课堂气氛活跃，知识点通俗易懂。</p>
         </div>
-        <div class="Headerbot">
+        <div :class="Headerbot">
             <Carousel v-model="value1" loop autoplay :arrow="never">
                 <CarouselItem>
                     <img src="https://imgs.genshuixue.com/0cms/d/file/content/2019/04/5ca1ed7ae9760.jpg" alt="">
@@ -38,14 +38,20 @@
             </Carousel>
         </div>
         <div class="process">
-            <div style="font-size: 40px;color: #000;line-height: 40px;text-align: center;">
+            <div :class="processHeader" style="font-size: 40px;color: #000;line-height: 40px;text-align: center;">
                 <span style="margin-right: 12px;font-weight: bolder;">好服务</span>
                 双师辅导全程伴学
             </div>
-            <span style="margin-top: 16px;font-size: 12px;color: #9d9d9d;letter-spacing: 5px;text-align: center;display: block;">SERVICE</span>
-            <p style="margin-top: 16px;text-align: center;color: #5d5d5d;font-size: 14px;">辅导老师团队严格从985、211等名牌大学筛选，录用比例仅为5%。</p>
-            <p style="text-align: center;color: #5d5d5d;font-size: 14px;margin-bottom:60px;">采用“名师授课+双师辅导”的模式，对学员从课前预习、课堂互动、课后辅导、练习批改等环节全程伴学，监督辅导，让每个学员都能享受优质的教学辅导服务。</p>
-            <div class="processPart">
+            <span :class="processHeader" style="margin-top: 16px;font-size: 12px;color: #9d9d9d;letter-spacing: 5px;text-align: center;display: block;">SERVICE</span>
+            <p :class="processHeader" style="margin-top: 16px;text-align: center;color: #5d5d5d;font-size: 14px;">辅导老师团队严格从985、211等名牌大学筛选，录用比例仅为5%。</p>
+            <p :class="processHeader" style="text-align: center;color: #5d5d5d;font-size: 14px;margin-bottom:60px;">采用“名师授课+双师辅导”的模式，对学员从课前预习、课堂互动、课后辅导、练习批改等环节全程伴学，监督辅导，让每个学员都能享受优质的教学辅导服务。</p>
+            <div :class="processPart" 
+            style="
+            display: inline-block;
+            width: 250px;
+            height: 207px;
+            "
+            >
                 <div>
                     <img 
                     style="width: 80px;height: 80px;"
@@ -59,7 +65,13 @@
                 style="width: 24px;height: 20px;position: relative;right: -192px;top: -90px;"
                 src="https://imgs.genshuixue.com/0cms/d/file/content/2019/02/5c74edede1965.png" alt="">
             </div>
-            <div class="processPart">
+            <div :class="processPart" 
+             style="
+            display: inline-block;
+            width: 250px;
+            height: 207px;
+            "
+            >
                 <div>
                     <img 
                     style="width: 80px;height: 80px;"
@@ -73,7 +85,13 @@
                 style="width: 24px;height: 20px;position: relative;right: -192px;top: -90px;"
                 src="https://imgs.genshuixue.com/0cms/d/file/content/2019/02/5c74edede1965.png" alt="">
             </div>
-            <div class="processPart">
+            <div :class="processPart" 
+             style="
+            display: inline-block;
+            width: 250px;
+            height: 207px;
+            "
+            >
                 <div>
                     <img 
                     style="width: 80px;height: 80px;"
@@ -87,7 +105,13 @@
                 style="width: 24px;height: 20px;position: relative;right: -192px;top: -90px;"
                 src="https://imgs.genshuixue.com/0cms/d/file/content/2019/02/5c74edede1965.png" alt="">
             </div>
-            <div class="processPart">
+            <div :class="processPart" 
+             style="
+            display: inline-block;
+            width: 250px;
+            height: 207px;
+            "
+            >
                 <div>
                     <img 
                     style="width: 80px;height: 80px;"
@@ -101,7 +125,13 @@
                 style="width: 24px;height: 20px;position: relative;right: -192px;top: -90px;"
                 src="https://imgs.genshuixue.com/0cms/d/file/content/2019/02/5c74edede1965.png" alt="">
             </div>
-            <div class="processPart">
+            <div :class="processPart" 
+             style="
+            display: inline-block;
+            width: 250px;
+            height: 207px;
+            "
+            >
                 <div>
                     <img 
                     style="width: 80px;height: 80px;"
@@ -115,7 +145,13 @@
                 style="width: 24px;height: 20px;position: relative;right: -192px;top: -90px;"
                 src="https://imgs.genshuixue.com/0cms/d/file/content/2019/02/5c74edede1965.png" alt="">
             </div>
-             <div class="processPart">
+             <div :class="processPart" 
+              style="
+            display: inline-block;
+            width: 250px;
+            height: 207px;
+            "
+             >
                 <div>
                     <img 
                     style="width: 80px;height: 80px;"
@@ -129,7 +165,13 @@
                 style="width: 24px;height: 20px;position: relative;right: -192px;top: -90px;"
                 src="https://imgs.genshuixue.com/0cms/d/file/content/2019/02/5c74edede1965.png" alt="">
             </div>
-             <div class="processPart">
+             <div :class="processPart"
+              style="
+            display: inline-block;
+            width: 250px;
+            height: 207px;
+            "
+             >
                 <div>
                     <img 
                     style="width: 80px;height: 80px;"
@@ -143,7 +185,13 @@
                 style="width: 24px;height: 20px;position: relative;right: -192px;top: -90px;"
                 src="https://imgs.genshuixue.com/0cms/d/file/content/2019/02/5c74edede1965.png" alt="">
             </div>
-             <div class="processPart">
+             <div :class="processPart"
+              style="
+            display: inline-block;
+            width: 250px;
+            height: 207px;
+            "
+             >
                 <div>
                     <img 
                     style="width: 80px;height: 80px;"
@@ -160,28 +208,28 @@
             <p style="font-size: 12px;color: #9d9d9d;text-align: center;">*以上服务非全部课程通用，详情请看课程页面描述或咨询客服</p>
         </div>
         <div class="fouter">
-            <div style="font-size: 40px;color: #fff;line-height: 40px;text-align: center;">
+            <div :class="fouterHead" style="font-size: 40px;color: #fff;line-height: 40px;text-align: center;">
                 <span style="margin-right: 12px;font-weight: bolder;">高科技</span>
                 助力学习效率翻倍
             </div>
-            <span style="display: block;opacity: .5;font-size: 12px;color: #fff;letter-spacing: 5px;text-align: center;">HIGH-TECH</span>
-            <span style="margin-left: 50px;display: block;font-size: 14px;color: #fff;text-align: center;">跟谁学秉承“科技让教育更美好”的理念，投入巨大的人力和财力组建强大的研发团队，用高科技助力学习，为您的学习保驾护航，采用大数据精准分析，比学校更懂你。</span>
+            <span :class="fouterHead"  style="display: block;opacity: .5;font-size: 12px;color: #fff;letter-spacing: 5px;text-align: center;">HIGH-TECH</span>
+            <span :class="fouterHead"  style="margin-left: 50px;display: block;font-size: 14px;color: #fff;text-align: center;">跟谁学秉承“科技让教育更美好”的理念，投入巨大的人力和财力组建强大的研发团队，用高科技助力学习，为您的学习保驾护航，采用大数据精准分析，比学校更懂你。</span>
             <div style="margin-top: 80px;">
-                <div style="border-radius: 15px;background: #fff;float: left;width: 240px;height: 470px;margin:0 5px;">
+                <div :class="fouterLeft" style="border-radius: 15px;background: #fff;float: left;width: 240px;height: 470px;margin:0 5px;">
                     <img style="width: 100%;height: 162px;" src="https://i.gsxcdn.com/0cms/d/file/content/2019/07/5d41841c2f6ce.png" alt="">
                     <h2 style="margin-top: 32px;line-height: 24px;margin-bottom: 16px;">在线直播教学</h2>
                     <div style="font-size: 16px;color: #2d2d2d;margin-top: 12px;">-  随时随地在线学习、实时互动</div>
                     <div style="font-size: 16px;color: #2d2d2d;margin-top: 12px;">-  支持电脑、手机、平板等多终端上课</div>
                     <div style="font-size: 16px;color: #2d2d2d;margin-top: 12px;">-  支持课堂小测、举手提问、互动抽奖等多种互动方式</div>
                 </div>
-                <div style="border-radius: 15px;background: #fff;float: left;width: 240px;height: 470px;margin:0 5px;">
+                <div :class="fouterLeft" style="border-radius: 15px;background: #fff;float: left;width: 240px;height: 470px;margin:0 5px;">
                     <img style="width: 100%;height: 162px;" src="https://imgs.genshuixue.com/0cms/d/file/content/2019/03/5c9890385b402.png" alt="">
                     <h2 style="margin-top: 32px;line-height: 24px;margin-bottom: 16px;">课程随时回放</h2>
                     <div style="font-size: 16px;color: #2d2d2d;margin-top: 12px;">-  支持下载后离线观看学习</div>
                     <div style="font-size: 16px;color: #2d2d2d;margin-top: 12px;">-  有效期内无限次回放，巩固知识点</div>
                     <div style="font-size: 16px;color: #2d2d2d;margin-top: 12px;">-  再也不用担心错过老师讲的重点难点</div>
                 </div>
-                <div style="border-radius: 15px;background: #fff;float: left;width: 240px;height: 470px;margin:0 5px;">
+                <div :class="fouterRight" style="border-radius: 15px;background: #fff;float: left;width: 240px;height: 470px;margin:0 5px;">
                     <img style="width: 100%;height: 162px;" src="https://imgs.genshuixue.com/0cms/d/file/content/2019/03/5c98903882ab3.png" alt="">
                     <h2 style="margin-top: 32px;line-height: 24px;margin-bottom: 16px;">在线练习系统</h2>
                     <div style="font-size: 16px;color: #2d2d2d;margin-top: 12px;">-  课后配套在线练习</div>
@@ -189,7 +237,7 @@
                     <div style="font-size: 16px;color: #2d2d2d;margin-top: 12px;">-  支持文字、语音、图片等多种方式答题</div>
                     <div style="font-size: 16px;color: #2d2d2d;margin-top: 12px;">-  高科技助力，告别无法课后练习的烦恼</div>
                 </div>
-                <div style="border-radius: 15px;background: #fff;float: left;width: 240px;height: 470px;margin:0 5px;">
+                <div :class="fouterRight" style="border-radius: 15px;background: #fff;float: left;width: 240px;height: 470px;margin:0 5px;">
                     <img style="width: 100%;height: 162px;" src="https://imgs.genshuixue.com/0cms/d/file/content/2019/03/5c989038b4cf5.png" alt="">
                     <h2 style="margin-top: 32px;line-height: 24px;margin-bottom: 16px;">大数据驱动</h2>
                     <div style="font-size: 16px;color: #2d2d2d;margin-top: 12px;">-  基于跟谁学百万学员数据，科学制定课程方案，比学校更懂你</div>
@@ -199,14 +247,14 @@
             </div>
         </div>
         <div class="bottom">
-            <div style="color: #2d2d2d;font-size: 40px;line-height: 40px;">
+            <div :class="bottomTop" style="color: #2d2d2d;font-size: 40px;line-height: 40px;">
                 <span style="font-weight: bolder;margin-right: 12px;">优秀</span>
                 学员
             </div>
-            <div style="margin-top: 16px;font-size: 12px;color: #9d9d9d;letter-spacing: 5px;text-align: center;">STUDENT</div>
-            <div style="margin-top: 16px;font-size: 14px;color: #5d5d5d;text-align: center;margin-bottom: 70px;">来自学员和家长的真实反馈，看得见的高品质、好效果。</div>
+            <div :class="bottomTop" style="margin-top: 16px;font-size: 12px;color: #9d9d9d;letter-spacing: 5px;text-align: center;">STUDENT</div>
+            <div :class="bottomTop" style="margin-top: 16px;font-size: 14px;color: #5d5d5d;text-align: center;margin-bottom: 70px;">来自学员和家长的真实反馈，看得见的高品质、好效果。</div>
 
-            <Carousel autoplay v-model="value2" loop :arrow="hover" :dots="outside">
+            <Carousel :class="bottomBot" autoplay v-model="value2" loop :arrow="hover" :dots="outside">
                 <CarouselItem>
                     <div class="carousel">
                         <div>
@@ -300,8 +348,43 @@
                 never:"never",
                 value2: 0,
                 hover:"hover",
-                outside:"outside"
+                outside:"outside",
+                header:"",
+                Headerbot:"",
+                processHeader:"",
+                processPart:"",
+                fouterHead:"",
+                fouterRight:"",
+                fouterLeft:"",
+                bottomTop:"",
+                bottomBot:""
             }
+        },
+        mounted(){
+            window.addEventListener('scroll', this.handleScroll)
+        },
+        methods:{
+            handleScroll(){
+                var scrollTop = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop
+                if(scrollTop>2000&&scrollTop<2100){
+                    this.header = "header"
+                    this.Headerbot = "Headerbot"
+                
+                }else if(scrollTop>2700&scrollTop<2900){
+                    this.processHeader = "processHeader"
+                    this.processPart = "processPart"
+                    // this.bottmRight = "bottmRight"
+                }else if(scrollTop>3400&scrollTop<3600){
+                    this.fouterHead = "fouterHead"
+                    this.fouterLeft = "fouterLeft"
+                    this.fouterRight = "fouterRight"
+                }else if(scrollTop>4300&scrollTop<4500){
+                    this.bottomTop = "bottomTop"
+                    this.bottomBot = "bottomBot"
+                }
+                // console.log(scrollTop)
+            }
+
         }
     }
 </script>
@@ -312,15 +395,121 @@
         margin: 0 auto;
         padding-top: 100px;
     }
+    .header{
+        animation:bottmLeftOne1 1s infinite;
+        -webkit-animation:bottmLeftOne1 1s infinite;
+        animation-iteration-count:1;
+    }
+     @keyframes bottmLeftOne1
+    {
+        from {display: none !important;position: relative;top: -100px;opacity: -0.6;}
+        to {display: block !important;position: relative;top: 0;opacity: 0.4;}
+    }
+
+    @-webkit-keyframes bottmLeftOne1
+    {
+        from {display: none !important;position: relative;top: -100px;opacity: -0.6;}
+        to {display: block !important;position: relative;top: 0;opacity: 0.4;}
+    }
+    .Headerbot{
+        animation:Headerbot 1s infinite;
+        -webkit-animation:Headerbot 1s infinite;
+        animation-iteration-count:1;
+    }
+     @keyframes Headerbot
+    {
+        from {display: none !important;position: relative;top: 100px;opacity: -0.6;}
+        to {display: block !important;position: relative;top: 0;opacity: 0.4;}
+    }
+
+    @-webkit-keyframes Headerbot
+    {
+        from {display: none !important;position: relative;top: 100px;opacity: -0.6;}
+        to {display: block !important;position: relative;top: 0;opacity: 0.4;}
+    }
+    .processHeader{
+        animation:processHeader 1s infinite;
+        -webkit-animation:processHeader 1s infinite;
+        animation-iteration-count:1;
+    }
+     @keyframes processHeader
+    {
+        from {display: none !important;position: relative;top: -100px;opacity: -0.6;}
+        to {display: block !important;position: relative;top: 0;opacity: 0.4;}
+    }
+
+    @-webkit-keyframes processHeader
+    {
+        from {display: none !important;position: relative;top: -100px;opacity: -0.6;}
+        to {display: block !important;position: relative;top: 0;opacity: 0.4;}
+    }
     .process{
         margin-top: 80px;
         text-align: left;
     }
     .processPart{
-        display: inline-block;
-        width: 250px;
-        height: 207px;
-        height: 207px;
+        animation:processPart 1s infinite;
+        -webkit-animation:processPart 1s infinite;
+        animation-iteration-count:1;
+    }
+     @keyframes processPart
+    {
+        from {display: none !important;position: relative;top: 100px;opacity: -0.6;}
+        to {display: block !important;position: relative;top: 0;opacity: 0.4;}
+    }
+
+    @-webkit-keyframes processPart
+    {
+        from {display: none !important;position: relative;top: 100px;opacity: -0.6;}
+        to {display: block !important;position: relative;top: 0;opacity: 0.4;}
+    }
+    .fouterHead{
+        animation:fouterHead 1s infinite;
+        -webkit-animation:fouterHead 1s infinite;
+        animation-iteration-count:1;
+    }
+     @keyframes fouterHead
+    {
+        from {display: none !important;position: relative;top: -100px;opacity: -0.6;}
+        to {display: block !important;position: relative;top: 0;opacity: 0.4;}
+    }
+
+    @-webkit-keyframes fouterHead
+    {
+        from {display: none !important;position: relative;top: -100px;opacity: -0.6;}
+        to {display: block !important;position: relative;top: 0;opacity: 0.4;}
+    }
+    .fouterLeft{
+        animation:fouterLeft 1s infinite;
+        -webkit-animation:fouterLeft 1s infinite;
+        animation-iteration-count:1;
+    }
+     @keyframes fouterLeft
+    {
+        from {display: none !important;position: relative;left: -200px;opacity: -0.6;}
+        to {display: block !important;position: relative;left: 0;opacity: 0.4;}
+    }
+
+    @-webkit-keyframes fouterLeft
+    {
+        from {display: none !important;position: relative;left: -200px;opacity: -0.6;}
+        to {display: block !important;position: relative;left: 0;opacity: 0.4;}
+    }
+    .fouterRight{
+        animation:fouterRight 1s infinite;
+        -webkit-animation:fouterRight 1s infinite;
+        animation-iteration-count:1;
+    }
+     @keyframes fouterRight
+    {
+        from {display: none !important;position: relative;right: -200px;opacity: -0.6;}
+        to {display: block !important;position: relative;right: 0;opacity: 0.4;}
+    }
+
+    @-webkit-keyframes fouterRight
+    {
+        from {display: none !important;position: relative;right: -200px;opacity: -0.6;}
+        to {display: block !important;position: relative;right: 0;opacity: 0.4;}
     }
     .fouter{
         background-image: url(https://imgs.genshuixue.com/0cms/d/file/content/2019/03/5c9cb0de5ba43.jpg);
@@ -333,6 +522,38 @@
     }
     .bottom{
         margin-top: 80px;
+    }
+    .bottomTop{
+        animation:bottomTop 1s infinite;
+        -webkit-animation:bottomTop 1s infinite;
+        animation-iteration-count:1;
+    }
+     @keyframes bottomTop
+    {
+        from {display: none !important;position: relative;top: -100px;opacity: -0.6;}
+        to {display: block !important;position: relative;top: 0;opacity: 0.4;}
+    }
+
+    @-webkit-keyframes bottomTop
+    {
+        from {display: none !important;position: relative;top: -100px;opacity: -0.6;}
+        to {display: block !important;position: relative;top: 0;opacity: 0.4;}
+    }
+    .bottomBot{
+        animation:bottomBot 1s infinite;
+        -webkit-animation:bottomBot 1s infinite;
+        animation-iteration-count:1;
+    }
+     @keyframes bottomBot
+    {
+        from {display: none !important;position: relative;top: 200px;opacity: -0.6;}
+        to {display: block !important;position: relative;top: 0;opacity: 0.4;}
+    }
+
+    @-webkit-keyframes bottomBot
+    {
+        from {display: none !important;position: relative;top: 200px;opacity: -0.6;}
+        to {display: block !important;position: relative;top: 0;opacity: 0.4;}
     }
     .carousel{
         background-image: url(https://imgs.genshuixue.com/0cms/d/file/content/2019/03/5c88b02ec52db.png);
